@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/destination-styles/destination.css">
+    <link rel="stylesheet" href="/home-styles/home.css">
+    <link rel="shortcut icon" href="/images/shared/logo.svg" type="image/x-icon">
+    <title>Destination</title>
+</head>
+<body>
+    <main class="destination">
+        <header>
+            <img src="/images/shared/logo.svg" alt="logo" class="logo">
+      
+            <div class="line"></div>
+      
+            <nav>
+      
+              <img src="/images/shared/icon-close.svg" alt="close-menu" id="closeBtn">
+      
+              <ul>
+                <li><a href="/index.html" class="first">Home</a></li>
+                <li><a href="/destination.html" class="second active">Destination</a></li>
+                <li><a href="crew.html" class="third">Crew</a></li>
+                <li class="last"><a href="technology.html" class="fourth">Technology</a></li>
+              </ul>
+            </nav>
+      
+            <img src="/images/shared/icon-hamburger.svg" alt="open-menu" id="openBtn">
+          </header>
+
+          <h1 class="pick">
+              <span style="margin-right: 2rem; color: rgb(179, 179, 179);">01</span>Pick your destination
+          </h1>
+
+          <section class="planets">
+              <img src="/images/destination/image-moon.png" alt="picture of the moon" id="planet-img">
+
+              <div class="selectors-and-explainations">
+                  <div class="selectors">
+                       <p id="moon" class="selected">Moon</p>
+                       <p id="mars">Mars</p>
+                       <p id="europa">Europa</p>
+                       <p id="titan">Titan</p>
+                  </div>
+
+                  <div class="explainations">
+                      <h1 id="planet-name">
+                          MOON
+                      </h1>
+
+                      <p id="planet-description">
+                        See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+                        regain perspective and come back refreshed. While you’re there, take in some history 
+                        by visiting the Luna 2 and Apollo 11 landing sites.
+                      </p>
+
+                      <div class="nline"></div>
+
+                      <div class="distance-and-time">
+
+                      <div class="avg-distance">
+                          <h2>AVG. DISTANCE</h2>
+                          <p id="distance">
+                            384,400 km
+                          </p>
+                      </div>
+
+                      <div class="travel-time">
+                        <h2>  EST. TRAVEL TIME</h2>
+                        <p id="time">
+                            3 days
+                        </p>
+                    </div>
+                    </div>
+                  </div>
+                 
+              </div>
+          </section>
+    </main>
+
+    <script src="/home-styles/home.js"></script>
+    <script src="/destination-styles/destination.js"></script>
+</body>
+</html>

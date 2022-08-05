@@ -1,0 +1,187 @@
+/* styling for crew on mobile  */
+main.crew{
+    max-width: 100vw;
+    min-height: 100vh;
+    background-image: url('/images/crew/background-crew-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5rem;
+}
+
+/* styling for the header text  */
+
+h2.heading{
+    color: var(--blueishGrey);
+    font-family: var(--smoothFont);
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .35rem;
+    font-size: 1.7rem;
+}
+
+/* styling for the crew person image  */
+
+main.crew #person-img{
+    display: block;
+    max-width: 80vw;
+    margin: 5rem auto;
+}
+
+/* styling for the buttons  */
+
+.button-and-text .buttons{
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.button-and-text .buttons>*{
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 2rem;
+    border: solid .5px var(--blueishGrey);
+}
+
+/* button hover styles  */
+
+.button-and-text .buttons>*:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+    transition: transform .2s ease;
+    -webkit-transition: transform .2s ease;
+    -moz-transition: transform .2s ease;
+    -ms-transition: transform .2s ease;
+    -o-transition: transform .2s ease;
+}
+
+/* styling for their explanations; rank,name e.t.c  */
+
+h3#rank{
+    color: var(--blueishGrey);
+    text-align: center;
+    font-family: var(--sharpFont);
+    margin-bottom: .5rem;
+}
+
+h1#name{
+    color: var(--blueishGrey);
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--sharpFont);
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+
+p#description{
+    max-width: 80vw;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--blueishGrey);
+    font-family: var(--smoothFont);
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* styling for crew on tablets */
+@media screen and (min-width:600px) {
+    main.crew{
+        padding-bottom: 0;
+        background-image: url('/images/crew/background-crew-tablet.jpg');
+    }
+
+    /* styling for the heading text  */
+    h2.heading{
+        text-align: left;
+        padding-left: 4rem;
+        font-size: 2.5rem;
+    }
+
+    /* styling for the crew person image  */
+
+    main.crew #person-img{
+        max-width: 60vw;
+    }
+
+    /* styling for their explanations; rank,name e.t.c */
+    h3#rank{
+        font-size: 3rem;
+        margin-top: 12rem;
+    }
+
+    h1#name{
+        font-size:6rem; 
+    }
+
+    p#description{
+        font-size: 1.6rem;
+    }
+}
+
+/* styling for crew on desktop  */
+@media screen and (min-width:950px) {
+    main.crew{
+        padding-bottom: 0;
+        background-image: url('/images/crew/background-crew-desktop.jpg');
+    }
+
+    .crew-members-and-button{
+        margin: auto;
+        max-width: 90vw;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        position: relative;
+    }
+
+    .button-and-text{
+        position: relative;
+    }
+
+    /* styling for the image */
+
+    main.crew #person-img{
+        margin-top: 10rem;
+        margin-bottom: 0;
+        max-width: 55vw;
+    }
+
+    /* styling for their explanations; rank,name e.t.c  */
+
+    h3#rank{
+        text-align: left;
+    }
+
+    h1#name{
+        text-align: left;
+    }
+
+    p#description{
+        text-align: left;
+        max-width: 60%;
+        margin: 0;
+    }
+
+    /* styling for the buttons */
+    .button-and-text .buttons{
+        position: absolute;
+        bottom: -10rem;
+    }
+    
+}
+
+/* javascript toggle class */
+.buttons div.picked{
+    background-color: var(--blueishGrey);
+}

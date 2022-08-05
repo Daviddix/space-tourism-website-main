@@ -1,0 +1,357 @@
+/* general styles */
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+    background-color: var(--blueishGrey);
+    color: var(--mainColor);
+}
+
+:root{
+    --mainColor: #0b0d17;
+    --blueishGrey: #d2d8f9;
+    --greyLike: #85868b;
+    --greyLikeOpaque: #85868b6c;
+    --greyLikeOpaqueTab: #85868b49;
+    --greyLikeOpaqueDesktop: #85868b27;
+    --sharpFont:Bellefair;
+    --smoothFont:Barlow;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Bellefair;
+}
+
+@font-face {
+    font-family:Bellefair;
+    src: url("/fonts/bellefair-cufonfonts/Bellefair-Regular.ttf");
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url('/fonts/barwol/barlow-condensed.regular.ttf');
+}
+
+/* styling for mobile  */
+/* styling for the header  */
+main.home{
+    background-image: url('/images/home/background-home-mobile.jpg');
+    max-width: 100vw;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom:7rem;
+}
+
+header{
+    max-width: 100vw;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:7rem;
+}
+
+.logo{
+    width: 4rem;
+}
+
+#closeBtn{
+    position: absolute;
+    top: 2rem;
+    right:4rem;
+    width: 3rem;
+}
+
+nav{
+    color:white;
+    position: fixed;
+    min-height: 80vh;
+    width: 50vw;
+    top: 0;
+    right:-100rem;
+    padding: 6rem;
+    background-color: var(--greyLikeOpaque);
+    backdrop-filter: blur(9rem);
+    z-index: 31;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+}
+
+
+nav ul li{
+    list-style-type: none;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-family: var(--smoothFont);
+    position: relative;
+}
+
+nav ul li a.active::after{
+    content: '';
+    width: 100%;
+    height: .2rem;
+    position: absolute;
+    left: 0;
+    bottom:-1rem;
+    background-color: var(--blueishGrey);
+    animation: bigger 1s ease;
+    -webkit-animation: bigger 1s ease;
+}
+
+
+/* styling for the intro text */
+.home-page-introduction h2{
+    margin: auto;
+    color:var(--blueishGrey);
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: var(--smoothFont);
+    font-weight: 100;
+    word-spacing: .5rem;
+    letter-spacing: .3rem;
+    max-width: 30rem;
+}
+
+
+.home-page-introduction h2 span.big-space-text{
+    display: block;
+    color:white;
+    font-size: 7rem;
+    font-family: var(--sharpFont);
+}
+
+.home-page-introduction p{
+    margin: 4rem auto;
+    color:var(--blueishGrey);
+    font-family: var(--smoothFont);
+    max-width: 80vw;
+    line-height:1.8;
+    font-size:1.3rem;
+}
+
+/* styling for the explore button  */
+
+.explore{
+    width: 20rem;
+    height: 20rem;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin:auto;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.explore a{
+    color:black;
+    font-size:2rem;
+    text-decoration:none;
+}
+
+/* styling for home on tablets*/
+@media screen and (min-width:600px) {
+    main.home{
+        background-image: url('/images/home/background-home-tablet.jpg');
+    }
+
+    /* styling for the header */
+    #openBtn{
+        display:none;
+    }
+
+    #closeBtn{
+        display:none;
+    }
+
+    nav{
+        position: absolute;
+        top:0;
+        right:0;
+        width:60vw;
+        min-height: fit-content;
+        color:white;
+        background-color: var(--greyLikeOpaqueTab);
+        backdrop-filter: blur(9rem);
+        padding: 0;
+       
+    }
+
+    nav ul{
+         display: flex;
+         padding: 3rem;
+         justify-content: center;
+    }
+
+    nav ul li:not(.last){   
+        margin-right: 4rem;   
+    }
+
+    nav ul li{
+         margin-bottom: 0;
+          font-size: 1.6rem;
+          position: relative;
+    }
+
+    nav ul li a.active::after{
+        content: '';
+        width: 100%;
+        height: .2rem;
+        position: absolute;
+        left: 0;
+        bottom:-3rem;
+        background-color: var(--blueishGrey);
+        animation: bigger 1s ease;
+        -webkit-animation: bigger 1s ease;
+}
+
+    /* styling for the intro text  */
+    .home-page-introduction{
+        max-width: 60vw;
+        margin: auto;
+    }
+
+    .home-page-introduction h2{
+        text-align: left;
+        max-width: 50rem;
+        margin: 0;
+    }
+
+    .home-page-introduction h2 span.big-space-text{
+        font-size:14rem;
+    }
+
+    .home-page-introduction p{
+        font-size: 1.7rem;
+    }
+}
+
+/* styling for home on desktops */
+@media screen and (min-width:950px) {
+    main.home{
+        background-image: url('/images/home/background-home-desktop.jpg');
+    }
+
+    /* styling for header */
+    header{
+        padding-top: 4rem;
+    }
+
+    #openBtn{
+        display: none;
+    }
+
+    nav{
+        top:2rem;
+        backdrop-filter: blur(5rem);
+        background-color: var(--greyLikeOpaqueDesktop);
+        width: 70vw;
+    }
+
+    nav ul{
+        justify-content: flex-end;
+    }
+
+    nav ul li a{
+        margin-right: 5rem;
+        position: relative;
+    }
+
+    nav ul li a.active::after{
+        content: '';
+        width: 100%;
+        height: .2rem;
+        position: absolute;
+        left: 0;
+        bottom:-3rem;
+        background-color: var(--blueishGrey);
+        animation: bigger 1s ease;
+        -webkit-animation: bigger 1s ease;
+}
+
+    nav ul li a.first::before{
+         content: '00';
+         font-size: 2rem;
+         margin-right: 1rem;
+    }
+
+    nav ul li a.second::before{
+        content: '01';
+        font-size: 2rem;
+        margin-right: 1rem;
+   }
+
+   nav ul li a.third::before{
+    content: '02';
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+    nav ul li a.fourth::before{
+        content: '03';
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    div.line{
+        width:50rem;
+        height: .1rem;
+        background-color:var(--blueishGrey);
+        margin-right: 62rem;
+    }
+
+    /* styling for the intro text  */
+
+    .second-side{
+        margin-top: 26rem;
+        max-width: 100vw;
+        display:flex;
+    }
+
+    .home-page-introduction{
+        margin-left: 4rem;
+    }
+
+    .home-page-introduction p{
+        max-width: 40rem;
+        margin-left: 0rem;
+    }
+
+}
+
+/* javascript classes to toggle */
+.display-none{
+    display:none;
+}
+
+.slide{
+    right:0rem;
+}
+
+/* animations */
+@keyframes bigger {
+    from{
+        width: 0;
+    }
+
+    to{
+        width:100%;
+    }
+}
